@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Result System</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #dff7ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        width: 90%;
+        max-width: 450px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #0796bd;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #777;
+        margin-bottom: 25px;
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 7px;
+        border: 1px solid #b8e5f1;
+        border-radius: 7px;
+        box-sizing: border-box;
+        font-size: 15px;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #0796bd;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        margin-top: 25px;
+        background: #0796bd;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #057b9c;
+      }
+
+      .result {
+        display: none;
+        margin-top: 25px;
+        padding: 20px;
+        background: #e9faff;
+        border-radius: 10px;
+      }
+
+      .result h2 {
+        text-align: center;
+        color: #0796bd;
+      }
+
+      .result p {
+        font-size: 16px;
+        color: #333;
+        margin: 15px 0;
+      }
+
+      #finalResult {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      #error {
+        color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Student Result System</h1>
+
+      <p class="subtitle">Enter Student Grades and Attendance</p>
+
+      <label>Subject 1 Grade</label>
+      <input
+        type="number"
+        id="grade1"
+        placeholder="Enter grade (0 - 100)"
+        min="0"
+        max="100"
+      />
+
+      <label>Subject 2 Grade</label>
+      <input
+        type="number"
+        id="grade2"
+        placeholder="Enter grade (0 - 100)"
+        min="0"
+        max="100"
+      />
+
+      <label>Subject 3 Grade</label>
+      <input
+        type="number"
+        id="grade3"
+        placeholder="Enter grade (0 - 100)"
+        min="0"
+        max="100"
+      />
+
+      <label>Attendance Percentage (%)</label>
+      <input
+        type="number"
+        id="attendance"
+        placeholder="Enter attendance (0 - 100)"
+        min="0"
+        max="100"
+      />
+
+      <button id="calculateBtn">Calculate Result</button>
+
+      <p id="error"></p>
+
+      <div class="result" id="result">
+        <h2>Student Report</h2>
+
+        <p>
+          <strong>Total Marks:</strong>
+          <span id="total"></span>
+        </p>
+
+        <p>
+          <strong>Average:</strong>
+          <span id="average"></span>
+        </p>
+
+        <p>
+          <strong>Grade:</strong>
+          <span id="finalGrade"></span>
+        </p>
+
+        <p>
+          <strong>Attendance:</strong>
+          <span id="showAttendance"></span>
+        </p>
+
+        <h3 id="finalResult"></h3>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
